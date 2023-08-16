@@ -87,6 +87,10 @@ dependencies {
 //	implementation 'org.redisson:redisson-spring-boot-starter:3.17.4'
 	implementation 'org.redisson:redisson-spring-boot-starter:3.17.7'
 
+	//test
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
 
 
 }
