@@ -3,6 +3,7 @@ package com.ssafy.nanumi.db.entity;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Builder;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -21,5 +22,11 @@ public class Category {
     private String name;
 
     @OneToMany(mappedBy = "category")
-    private List<Product>  products = new ArrayList<>();
+    private List<Product> products = new ArrayList<>();
+
+    @Builder
+    public Category(long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }

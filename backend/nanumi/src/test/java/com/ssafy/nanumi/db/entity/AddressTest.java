@@ -15,9 +15,9 @@ public class AddressTest {
         // Builder 패턴을 사용하여 address 객체 초기화
         address = Address.builder()
                 .id(1L)
-                .si("Seoul")
-                .guGun("Gangnam")
-                .dong("Apgujeong")
+                .si("Incheon")
+                .guGun("Yeonsu")
+                .dong("Songdo")
                 .build();
     }
 
@@ -29,19 +29,19 @@ public class AddressTest {
 
     @Test
     void testSi() {
-        String expectedSi = "Seoul";
+        String expectedSi = "Incheon";
         assertEquals(expectedSi, address.getSi());
     }
 
     @Test
     void testGuGun() {
-        String expectedGuGun = "Gangnam";
+        String expectedGuGun = "Yeonsu";
         assertEquals(expectedGuGun, address.getGuGun());
     }
 
     @Test
     void testDong() {
-        String expectedDong = "Apgujeong";
+        String expectedDong = "Songdo";
         assertEquals(expectedDong, address.getDong());
     }
 
