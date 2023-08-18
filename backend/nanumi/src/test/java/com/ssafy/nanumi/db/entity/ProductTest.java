@@ -34,13 +34,13 @@ public class ProductTest {
 
     @Test
     void testName() {
-        String name = "Laptop";
+        String name = "MacBook";
         assertEquals(name, product.getName());
     }
 
     @Test
     void testContent() {
-        String content = "This is a laptop";
+        String content = "MacBook";
         assertEquals(content, product.getContent());
     }
 
