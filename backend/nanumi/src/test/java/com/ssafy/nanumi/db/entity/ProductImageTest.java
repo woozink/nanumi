@@ -28,7 +28,7 @@ public class ProductImageTest {
     @Test
     void testProductImageBuilder() {
         assertEquals(1L, productImage.getId());
-        assertEquals("https://sample.com/image.jpg", productImage.getImageUrl());
+        assertEquals("https://google.com/image.jpg", productImage.getImageUrl());
         assertEquals(product, productImage.getProduct());
     }
 }

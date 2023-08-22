@@ -16,8 +16,8 @@ public class ProductTest {
     void setUp() {
         product = Product.builder()
                 .id(1L)
-                .name("Laptop")
-                .content("This is a laptop")
+                .name("MacBook")
+                .content("This is a MacBook")
                 .isClosed(false)
                 .isDeleted(false)
                 .address(null)  // for simplicity, you can add mock address here
@@ -40,7 +40,7 @@ public class ProductTest {
 
     @Test
     void testContent() {
-        String content = "MacBook";
+        String content = "This is a MacBook";
         assertEquals(content, product.getContent());
     }
 

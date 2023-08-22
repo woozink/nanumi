@@ -36,7 +36,7 @@ public class ReportTest {
     @Test
     void testReportBuilder() {
         assertEquals(1L, report.getId());
-        assertEquals("This is a sample report content.", report.getContent());
+        assertEquals("MacBook", report.getContent());
 //        assertFalse(report.getStatus());
         assertEquals(0, report.getStopDate());
         assertEquals(reporter, report.getReporter());

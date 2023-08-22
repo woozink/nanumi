@@ -26,7 +26,7 @@ public class UserTest {
                 .email("k99743844@gmail.com")
                 .nickname("송도 김우진")
                 .profileUrl("https://naver.com/profile.jpg")
-                .password("123")
+                .password("1234")
                 .isDeleted(false)
                 .address(mockAddress)
                 .loginProvider(mockLoginProvider)

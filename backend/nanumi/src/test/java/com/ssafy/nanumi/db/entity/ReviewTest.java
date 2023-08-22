@@ -21,7 +21,7 @@ public class ReviewTest {
 
         review = Review.builder()
                 .id(1L)
-                .content("최고")
+                .content("최고!")
                 .starPoint(5)
                 .rating(10)
                 .writer(writer)
