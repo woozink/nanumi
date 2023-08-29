@@ -44,6 +44,7 @@ dependencies {
 
 	// actuator / prometheus
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.projectlombok:lombok:1.18.20'
 	runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
 
 	// security & jwt
@@ -71,6 +72,8 @@ dependencies {
 
 	// MongoDB
 	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	implementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
+
 
 	// Socket
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
@@ -94,6 +97,23 @@ dependencies {
 	// H2
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'com.h2database:h2'
+
+	// TestContainers
+	testImplementation "org.testcontainers:junit-jupiter:1.17.2"
+	testImplementation "org.testcontainers:mysql:1.17.2"
+	// DB Driver
+	runtimeOnly 'mysql:mysql-connector-java'
+	implementation 'mysql:mysql-connector-java:8.0.25' // replace 8.0.25 with your desired version
+
+//	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+//		exclude group: 'com.vaadin.external.google', module: 'android-json'
+//	}
+
+	implementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'com.vaadin.external.google', module: 'android-json'
+	}
+
+
 
 }
 

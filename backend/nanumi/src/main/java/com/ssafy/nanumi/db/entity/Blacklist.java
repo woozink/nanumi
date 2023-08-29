@@ -20,7 +20,7 @@ public class Blacklist extends BaseTimeEntity {
     @Column(name = "id", nullable = false)
     private long id;
 
-    @Column(name = "is_blocked", columnDefinition = "TINYINT", nullable = false)
+    @Column(name = "is_blocked", columnDefinition = "TINYINT(1)", nullable = false)
     private boolean isBlocked;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -38,7 +38,6 @@ public class Blacklist extends BaseTimeEntity {
         this.blocker = blocker;
         this.target = target;
     }
-
     public void blockUser() {
         this.isBlocked = true;
     }

@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Builder
 @Getter
 @Setter
+@Builder
 @Table(name="users")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
