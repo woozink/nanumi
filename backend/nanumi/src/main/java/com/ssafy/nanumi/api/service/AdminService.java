@@ -60,7 +60,7 @@ public class AdminService {
 
         UserInfo userInfo = userInfoRepository.findById(adminUser.getUserInfo().getId())
                 .orElseThrow(() -> new CustomException(NOT_FOUND_USER_INFO));
-        
+
         userInfo.updateRefreshToken(RT);
 
         return new AdminLoginResDTO(adminUser, AT, RT);

@@ -37,7 +37,7 @@ public class UserService {
     private final AddressRepository addressRepository;
     private final LoginProviderRepository loginProviderRepository;
     private final EmailService emailService;
-    private final S3Service s3Service;
+//    private final S3Service s3Service;
     private final JwtProvider jwtProvider;
 
     public UserLoginResDTO login(UserLoginDTO userLoginDTO){
@@ -218,11 +218,11 @@ public class UserService {
         if(nickname != null) {
             userNickname = nickname;
         }
-        if(profileImg != null) {
-            if(!Objects.requireNonNull(profileImg.getOriginalFilename()).startsWith("https")){
-                imageString = s3Service.stringImage(profileImg);
-            }
-        }
+//        if(profileImg != null) {
+//            if(!Objects.requireNonNull(profileImg.getOriginalFilename()).startsWith("https")){
+//                imageString = s3Service.stringImage(profileImg);
+//            }
+//        }
         user.updateUserInfo(userNickname, imageString);
         return new UserSimpleDTO(user);
     }
