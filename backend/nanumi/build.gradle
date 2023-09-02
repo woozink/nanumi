@@ -37,7 +37,7 @@ dependencies {
 	// logging - aop
 //	implementation 'org.springframework.boot:spring-boot-starter-log4j2'
 	implementation 'org.springframework.boot:spring-boot-starter-aop'
-	implementation 'org.json:json:20220320'
+	implementation 'org.json:json'
 
 	// swagger
 	implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
@@ -104,9 +104,11 @@ dependencies {
 	implementation 'mysql:mysql-connector-java:8.0.25' // replace 8.0.25 with your desired version
 
 
-	implementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'com.vaadin.external.google', module: 'android-json'
+	implementation('org.skyscreamer:jsonassert:1.5.1') {
+		exclude group: 'com.vaddin.external.google', module: 'android-json'
 	}
+
+
 
 
 

@@ -3,6 +3,7 @@ package com.ssafy.nanumi.config.security;
 import com.ssafy.nanumi.config.jwt.JwtAuthenticationFilter;
 import com.ssafy.nanumi.config.jwt.JwtProvider;
 import lombok.RequiredArgsConstructor;
+import lombok.SneakyThrows;
 import org.json.JSONObject;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
@@ -68,6 +69,7 @@ public class SecurityConfig {
                 // 에러 핸들링
                 .exceptionHandling()
                 .accessDeniedHandler(new AccessDeniedHandler() {
+                    @SneakyThrows
                     @Override
                     public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) throws IOException, ServletException {
                         // 권한 문제가 발생했을 때 이 부분을 호출한다.
@@ -85,6 +87,7 @@ public class SecurityConfig {
                     }
                 })
                 .authenticationEntryPoint(new AuthenticationEntryPoint() {
+                    @SneakyThrows
                     @Override
                     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
                         // 인증문제가 발생했을 때 이 부분을 호출한다.
